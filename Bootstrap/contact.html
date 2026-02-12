@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<title>Contact</title>
+</head>
+<body>
+    <nav class="navbar bg-dark navbar-dark navbar-expand-md">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Navbar brand</a>
+            <button class="navbar-toggler" type="button" data-bs-target="#myMenu" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myMenu">
+                <ul class="navbar-nav ms-auto mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="myMenuDropdown" role="button" data-bs-toggle="dropdown">Dropdown</a>
+                        <ul class="dropdown-menu" aria-labelledby="myMenuDropdown">
+                            <li>
+                                <a href="#" class="dropdown-item">Action-1</a>
+                            </li>
+                            <hr class="dropdown-divider">
+                            <li>
+                                <a href="#" class="dropdown-item">Action-2</a>
+                            </li>
+                            <hr class="dropdown-divider">
+                            <li>
+                                <a href="#" class="dropdown-item">Action-3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of Navbar -->
+     <div class="container bg-secondary text-center text-light">
+        <h4 class="pt-4 pb-5">Contact Us</h4>
+     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form name="msg-frm">
+                    <div class="mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control border-primary">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email_id">Email-ID</label>
+                        <input type="email" name="email_id" id="email_id" class="form-control border-primary">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message">Email-ID</label>
+                        <textarea name="message" id="message" class="form-control border-primary" rows="7"></textarea>
+                    </div>
+                    <input type="submit" name="ok" value="Send" class="btn btn-primary">
+                </form>
+            </div>
+            <div class="col-6">
+                
+            </div>
+        </div>
+    </div>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
