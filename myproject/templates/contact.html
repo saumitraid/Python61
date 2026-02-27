@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block title %} Contactus Page {% endblock %}
+    {% block content %}
+    
+    <!-- End of Navbar -->
+    <!-- Image Slider -->
+    <div class="container bg-secondary text-center text-light">
+        <h4 class="pt-4 pb-5">Contact Us</h4>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form name="msg-frm">
+                    <div class="mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control border-primary">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email_id">Email-ID</label>
+                        <input type="email" name="email_id" id="email_id" class="form-control border-primary">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message">Email-ID</label>
+                        <textarea name="message" id="message" class="form-control border-primary" rows="7"></textarea>
+                    </div>
+                    <input type="submit" name="ok" value="Send" class="btn btn-primary">
+                </form>
+            </div>
+            <div class="col-6">
+                
+            </div>
+        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<title>{% block title %}MySite{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar bg-dark navbar-dark navbar-expand-md">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Navbar brand</a>
+            <button class="navbar-toggler" type="button" data-bs-target="#myMenu" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myMenu">
+                <ul class="navbar-nav ms-auto mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home-page' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="myMenuDropdown" role="button" data-bs-toggle="dropdown">Dropdown</a>
+                        <ul class="dropdown-menu" aria-labelledby="myMenuDropdown">
+                            <li>
+                                <a href="#" class="dropdown-item">Action-1</a>
+                            </li>
+                            <hr class="dropdown-divider">
+                            <li>
+                                <a href="#" class="dropdown-item">Action-2</a>
+                            </li>
+                            <hr class="dropdown-divider">
+                            <li>
+                                <a href="#" class="dropdown-item">Action-3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'cont-page' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of Navbar -->
+    {% block content %} {% endblock %}
+    <footer>
+        This is footer
+    </footer>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
