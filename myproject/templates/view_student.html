@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block title %} View Student Page {% endblock %}
+    {% block content %}
+    <div class="container">
+        <h1>All Student Details</h1>
+        {% if allstd %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contact Number</th>
+                    <th>City</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for std in allstd %}
+                <tr>
+                    <td>{{std.first_name}} {{std.last_name}}</td>
+                    <td>{{std.mobile}}</td>
+                    <td>{{std.city}}</td>
+                    <td><i class="fas fa-edit"></i></td>
+                    <td>
+                        <form method="post" action="std-delete">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{std.id}}">
+                            <button type="submit" class="btn"><i class="fas fa-trash-alt text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %} 
+        <h3 class="text-danger">No student details found</h3>
+        {% endif %} 
+        
+    </div>
+    {% endblock %}
